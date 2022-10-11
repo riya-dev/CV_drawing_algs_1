@@ -1,0 +1,14 @@
+Using convert utility on Linux workstations item options
+You can use the convert utility to change a .ppm (P3) file to , say, .jpg format like this:
+
+$>convert infile.ppm outfile.jpg
+
+However, if you try to convert a .jpg file to .ppm file by typing
+
+$>convert infile.jpg outfile.ppm
+
+you will get a P6-formatted .ppm file, which you won't be able to read with a text-editor (other than the first line).
+
+In order to convert a .jpg file to .ppm (P3) format (which can be inspected with a text editor), type
+
+$>convert -compress none infile.jpg outfile.ppm
